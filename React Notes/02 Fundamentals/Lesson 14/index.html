@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Load Babel -->
+    <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+<div id="react-container"></div>
+
+<script type="text/babel">
+
+class Box extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            width: 100,
+            height: 100,
+            backgroundColor: "teal"
+        }
+    }
+
+    update = () => {
+        this.setState({ backgroundColor: "red" })
+    }
+
+    componentDidUpdate(){
+        alert('Color has changed')
+    }
+
+    render(){
+        return(
+            <div id="myBox" style={this.state} onClick={this.update}></div>
+        )
+    }
+}
+
+ReactDOM.render( <Box />, document.getElementById( 'react-container' ) )
+
+</script>
+    
+</body>
+</html>

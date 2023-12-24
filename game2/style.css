@@ -1,0 +1,36 @@
+* {
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+}
+
+#grid {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 80px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.container {
+    max-width: 1300px;
+    width: 98%;
+}
+
+body {
+    background-color: #0d1b2a;
+}
+
+.result {
+    color: white;
+}
+
+.content-div {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
